@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"application\startup_stm32f103xb.o"
+"application\main.o"
+"application\stm32f1xx_it.o"
+"application\stm32f1xx_hal_msp.o"
+"application\stm32f1xx_hal_gpio_ex.o"
+"application\stm32f1xx_hal_uart.o"
+"application\stm32f1xx_hal.o"
+"application\stm32f1xx_hal_rcc.o"
+"application\stm32f1xx_hal_rcc_ex.o"
+"application\stm32f1xx_hal_gpio.o"
+"application\stm32f1xx_hal_dma.o"
+"application\stm32f1xx_hal_cortex.o"
+"application\stm32f1xx_hal_pwr.o"
+"application\stm32f1xx_hal_flash.o"
+"application\stm32f1xx_hal_flash_ex.o"
+"application\stm32f1xx_hal_exti.o"
+"application\system_stm32f1xx.o"
+--strict --scatter "Application\Application.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Application.map" -o Application\Application.axf
